@@ -1,0 +1,435 @@
+/*
+Theme Name: Planet Caravan
+Author: Peder Sjögren
+Description: Vids from across the world
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+
+Everything you do is a ballon.
+*/
+
+.admin-bar .navbar-fixed-top {
+    top: 32px;
+}
+/* Reset.css */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+   
+    /* TODO: Override this */
+   /* margin: 0; */
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+   
+
+    font-family: "Lato", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #8a8a8a;
+    background-color: #f8f8f8;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* End Reset.css */
+
+html,
+body {
+  height: 100%;
+  /* The html and body elements cannot have any padding or margin. */
+}
+
+/* Wrapper for page content to push down footer */
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  /* Negative indent footer by its height */
+  margin: 0 auto -60px;
+  /* Pad bottom by footer height */
+  padding: 0 0 60px;
+}
+
+
+
+/* Set the fixed height of the footer here */
+#footer {
+      /*height: 100px;*/
+    /*removed sticky*/
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 2000;
+     /*height: 100px; */
+    background-color: #f5f5f5;
+
+}
+
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+#wrap > .container {
+  padding: 60px 15px 0;
+}
+.container .credit {
+  margin: 20px 0;
+}
+
+#footer > .container {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/*Social icons*/
+
+.social  {
+  font-size:24px;
+  width:40px;
+  height:40px;
+  line-height:40px;
+  display:inline-block;
+  text-align:center;
+  border-radius:50%;
+  border:1px solid #ccc;
+  margin: 0px 8px;
+  color:inherit;
+  opacity:0.75;
+}
+
+.footer-margin{
+    margin: 25px;
+}
+
+
+/* Footer */
+.footer{
+    /*fix it*/
+
+    z-index: 2000;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+   /* background-color: rgba(100,100,100,0.4); */
+     background: #5F8FB4;
+}
+
+.navbar-text {
+    color: rgba(110,110,110,0.4);
+}
+.navbar-text a{
+
+    color: rgba(110,110,110,0.4);
+
+}
+
+
+
+/* test */
+
+ body {
+    overflow-x: hidden; 
+ }
+
+/* Toggle Styles */
+
+#wrapper {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled {
+    padding-left: 250px;
+}
+
+#sidebar-wrapper {
+    /* top:0; */
+    z-index: 1000;
+    position: fixed;
+    left: 250px;
+    width: 0;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    background: #1E392A;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    width: 250px;
+}
+
+#page-content-wrapper {
+    margin-top: 50px;
+    /*If no footer*/
+    /*bottom: 0px;*/
+    width: 100%;
+    position: absolute;
+    /*padding-left: 20px;*/
+    
+}
+
+#wrapper.toggled #page-content-wrapper {
+    position: absolute;
+    margin-right: -250px;
+}
+
+/* Navbar */
+
+.zobilu{
+   /* right: auto; */
+}
+
+/*Primary column*/
+
+.post{
+    /*padding: 18px;*/
+}
+
+.primary{
+    background: yellow;
+}
+
+/*Secondary column*/
+
+.checkout{
+    background: pink;
+}
+
+/* Pagination */
+.next{
+    
+}
+
+/* bootstrap overide */
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+.rowdy{
+    width: 90%;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+.load-more{
+    width:5%;
+
+}
+.load-less{
+    width:5%;
+
+}
+#load-forward{
+    display: block;
+}
+/* Sidebar Styles */
+
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar-nav li {
+    text-indent: 20px;
+    line-height: 40px;
+}
+
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #999999;
+}
+
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    color: #fff;
+    background: rgba(255,255,255,0.2);
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+    height: 65px;
+    font-size: 18px;
+    line-height: 60px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+    color: #999999;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+    color: #fff;
+    background: none;
+}
+
+/*Drop down wide*/
+.dropdown-menu { position: absolute; width: 100%; text-align: center;  }
+.dropdown-menu>li { display: inline-block; }
+.dropdown{ position:static}
+.dropdown-container {position:static}
+
+
+/* Sidebar fixed before expanding */
+ .sidebar-before {
+     position: fixed;
+     width: 200px;
+     height: 400px;
+     background: #000;
+ }
+
+
+/* Testing post design */
+
+h2, .h2 {
+   /* font-size: 28px; */
+    line-height: 1.4em;
+    margin-bottom: 0.375em;
+}
+.h2, h3, .h3, h4, .h4, h5, .h5 {
+    text-rendering: optimizelegibility;
+    font-weight: normal;
+    font-family: "PerpetuaMTStd", "Georgia", Cambria, Times New Roman, Times, serif;
+    letter-spacing: 1px;
+    color: #4a4a4a;
+}
+
+
+.shadow {
+    /* position: relative; */
+}
+
+.shadow {
+    z-index: -1;
+   /* position: absolute; 
+    content: "";
+    bottom: 15px;
+    left: 10px;
+    /*width: 50%;
+    top: 78%;
+    */
+    max-width: 300px;
+    background: #777;
+    -webkit-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.35);
+    -moz-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.35);
+}
+
+
+.boxedFeature {
+    background-color: #fff;
+    background-repeat: no-repeat;
+    padding: 18px;
+    margin-bottom: 30px;
+}
+
+.boxedFeature img {
+    max-width: 100%;
+    margin-bottom: 10px;
+}
+
+img {
+    border: 0;
+}
+
+
+p {
+    margin-top: 0;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    hyphens: none;
+    -webkit-hyphenate-before: 2;
+    -webkit-hyphenate-after: 3;
+    hyphenate-lines: 3;
+    -webkit-font-feature-settings: "liga", "dlig";
+    -moz-font-feature-settings: "liga=1, dlig=1";
+    -ms-font-feature-settings: "liga", "dlig";
+    -o-font-feature-settings: "liga", "dlig";
+    font-feature-settings: "liga", "dlig";
+}
+
+
+
+@media(min-width:768px) {
+    #wrapper {
+        padding-left: 0;
+    }
+
+    #wrapper.toggled {
+        padding-left: 250px;
+    }
+
+    #sidebar-wrapper {
+        width: 0;
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        width: 250px;
+    }
+
+    #page-content-wrapper {
+        /* padding: 20px; */
+        position: relative;
+    }
+
+    #wrapper.toggled #page-content-wrapper {
+        position: relative;
+        margin-right: 0;
+    }
+}
